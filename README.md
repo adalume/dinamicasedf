@@ -56,10 +56,14 @@ Landing page profissional para venda de produto digital (e-book de dinâmicas de
 
 ```
 252/
-├── index.html      # Estrutura HTML completa
-├── style.css       # Estilos CSS com design premium
-├── script.js       # Funcionalidades JavaScript
-└── README.md       # Este arquivo
+├── index.html          # Página principal (Root)
+├── assets/
+│   ├── css/
+│   │   └── style.css   # Estilos CSS
+│   ├── js/
+│   │   └── script.js    # Lógica JavaScript
+│   └── img/            # Imagens e ícones
+└── README.md           # Documentação
 ```
 
 ## 🌐 Como Visualizar
