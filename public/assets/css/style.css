@@ -1716,3 +1716,222 @@ body {
         font-size: 36px;
     }
 }
+
+/* --- Estilos do Modal de Oferta --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 24px;
+    position: relative;
+    padding: 60px 40px 40px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: var(--color-red);
+}
+
+.modal-header-badge {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fbbf24;
+    color: #1e293b;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 14px;
+    box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.4);
+    white-space: nowrap;
+}
+
+.modal-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.modal-subtitle {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    margin-bottom: 25px;
+}
+
+.modal-subtitle strong {
+    color: var(--color-red);
+}
+
+.modal-pricing-box {
+    background: white;
+    border: 3px solid #fbbf24;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.modal-old-price {
+    font-size: 18px;
+    color: var(--color-red);
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.modal-arrow {
+    font-size: 24px;
+    color: #94a3b8;
+    margin: 5px 0;
+}
+
+.modal-new-price {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--color-action);
+    line-height: 1;
+}
+
+.modal-features-list {
+    text-align: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.modal-list-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.modal-features-list ul {
+    list-style: none;
+}
+
+.modal-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.modal-savings-tag {
+    background: #fef2f2;
+    color: var(--color-red);
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.modal-cta-main {
+    display: block;
+    background: var(--color-action);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.4);
+}
+
+.modal-cta-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.4);
+}
+
+.modal-cta-secondary {
+    display: inline-block;
+    color: #94a3b8;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.modal-cta-secondary:hover {
+    color: #475569;
+}
+
+/* Responsividade Modal */
+@media (max-width: 480px) {
+    .modal-card {
+        padding: 50px 25px 30px;
+    }
+
+    .modal-new-price {
+        font-size: 48px;
+    }
+
+    .modal-title {
+        font-size: 22px;
+    }
+}

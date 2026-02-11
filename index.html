@@ -296,9 +296,9 @@
                         <li><span>✅</span> Compatível com a BNCC</li>
                     </ul>
 
-                    <a href="#checkout" class="cta-plan-v2">
+                    <button onclick="openOfferModal()" class="cta-plan-v2">
                         QUERO O BÁSICO
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Plano Premium -->
@@ -323,10 +323,10 @@
 
                     <div class="price-box-v2">
                         <span class="price-context-v2">por apenas</span>
-                        <div class="price-v2">R$ 26,90</div>
+                        <div class="price-v2">R$ 27,90</div>
                     </div>
 
-                    <div class="plan-savings-v2 green">Economia de R$ 131,10</div>
+                    <div class="plan-savings-v2 green">Economia de R$ 130,10</div>
 
                     <ul class="plan-features-v2">
                         <li><span>✅</span> +150 Dinâmicas Práticas</li>
@@ -583,6 +583,46 @@
             </p>
         </div>
     </footer>
+
+    <!-- Modal de Oferta Especial (Downsell/Upsell via Clique) -->
+    <div id="offer-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeOfferModal()">&times;</button>
+
+            <div class="modal-header-badge">ESPERE! OFERTA ESPECIAL</div>
+
+            <h2 class="modal-title">Temos uma oportunidade melhor!</h2>
+            <p class="modal-subtitle">Leve o <strong>Plano Premium</strong> com todos os bônus por apenas R$ 18,99</p>
+
+            <div class="modal-pricing-box">
+                <div class="modal-old-price">De R$ 158,00</div>
+                <div class="modal-arrow">↓</div>
+                <div class="modal-new-price">R$ 18,99</div>
+
+                <div class="modal-features-list">
+                    <p class="modal-list-title">VOCÊ LEVA:</p>
+                    <ul>
+                        <li><span>✅</span> +150 Dinâmicas Práticas</li>
+                        <li><span>✅</span> Acesso imediato</li>
+                        <li><span>✅</span> Garantia de 30 dias</li>
+                        <li><span>✅</span> Atualizações Mensais</li>
+                        <li><span>✅</span> Compatível com a BNCC</li>
+                        <li><span>✅</span> <strong>Todos os 3 Bônus (R$ 111 de valor)</strong></li>
+                    </ul>
+                </div>
+
+                <div class="modal-savings-tag">ECONOMIA: R$ 139,01</div>
+            </div>
+
+            <a href="#checkout-premium-discount" class="modal-cta-main">
+                Quero o Plano Premium por R$ 18,99
+            </a>
+
+            <a href="#checkout-basic" class="modal-cta-secondary" onclick="closeOfferModal()">
+                Quero o Plano básico por R$ 10,00
+            </a>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>

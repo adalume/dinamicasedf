@@ -299,6 +299,38 @@ function addPulseEffect() {
     document.head.appendChild(style);
 }
 
+// --- Funções do Modal de Oferta ---
+function openOfferModal() {
+    const modal = document.getElementById('offer-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+    }
+}
+
+function closeOfferModal() {
+    const modal = document.getElementById('offer-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Destrava o scroll
+    }
+}
+
+// Fechar modal ao clicar fora dele (no overlay)
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('offer-modal');
+    if (e.target === modal) {
+        closeOfferModal();
+    }
+});
+
+// Fechar modal ao apertar ESC
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeOfferModal();
+    }
+});
+
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
     updateCurrentDate();
