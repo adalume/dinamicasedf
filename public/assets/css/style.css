@@ -1741,15 +1741,15 @@ body {
 .modal-card {
     background: white;
     width: 100%;
-    max-width: 340px;
-    border-radius: 12px;
+    max-width: 300px;
+    border-radius: 10px;
     position: relative;
-    padding: 25px 15px 15px;
+    padding: 20px 12px 12px;
     text-align: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
     animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow-y: auto;
-    max-height: 90vh;
+    max-height: 85vh;
 }
 
 @keyframes fadeIn {
@@ -1793,32 +1793,32 @@ body {
 
 .modal-header-badge {
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: 50%;
     transform: translateX(-50%);
     background: #fbbf24;
     color: #1e293b;
-    padding: 10px 24px;
-    border-radius: 12px;
+    padding: 6px 16px;
+    border-radius: 8px;
     font-weight: 900;
-    font-size: 14px;
-    box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.4);
+    font-size: 11px;
+    box-shadow: 0 8px 12px -2px rgba(251, 191, 36, 0.3);
     white-space: nowrap;
 }
 
 .modal-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     color: var(--color-primary);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .modal-subtitle {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--color-text-secondary);
-    margin-bottom: 10px;
-    line-height: 1.3;
+    margin-bottom: 8px;
+    line-height: 1.2;
 }
 
 .modal-subtitle strong {
@@ -1829,26 +1829,22 @@ body {
     background: white;
     border: 2px solid #fbbf24;
     border-radius: 8px;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 6px;
+    margin-bottom: 8px;
     position: relative;
 }
 
 .modal-old-price {
-    font-size: 18px;
+    font-size: 14px;
     color: var(--color-red);
     text-decoration: line-through;
     font-weight: 600;
 }
 
-.modal-arrow {
-    font-size: 24px;
-    color: #94a3b8;
-    margin: 5px 0;
-}
+
 
 .modal-new-price {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
     color: var(--color-action);
     line-height: 1;
@@ -1862,11 +1858,7 @@ body {
 }
 
 .modal-list-title {
-    font-size: 12px;
-    font-weight: 800;
-    color: #94a3b8;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    display: none;
 }
 
 .modal-features-list ul {
@@ -1898,14 +1890,14 @@ body {
     display: block;
     background: var(--color-action);
     color: white;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 8px;
+    border-radius: 5px;
     font-weight: 900;
     text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 6px;
+    font-size: 13px;
+    margin-bottom: 4px;
     transition: all 0.2s;
-    box-shadow: 0 10px 15px -1px rgba(34, 197, 94, 0.2);
+    box-shadow: 0 8px 12px -1px rgba(34, 197, 94, 0.2);
     border: none;
 }
 
@@ -1919,10 +1911,10 @@ body {
     display: block;
     background: transparent;
     color: #94a3b8;
-    padding: 5px;
+    padding: 4px;
     font-weight: 600;
     text-decoration: underline;
-    font-size: 11px;
+    font-size: 10px;
     transition: all 0.2s;
     border: none;
 }
@@ -1932,17 +1924,14 @@ body {
     color: #475569;
 }
 
-/* Responsividade Modal */
+/* Responsividade Modal compacta */
 @media (max-width: 480px) {
     .modal-card {
-        padding: 50px 25px 30px;
+        max-width: 270px;
+        padding: 15px 8px 8px;
     }
 
     .modal-new-price {
-        font-size: 48px;
-    }
-
-    .modal-title {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
