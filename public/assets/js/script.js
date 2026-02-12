@@ -260,19 +260,59 @@ function generatePlaceholderImages() {
     */
 }
 
-// Tracking de cliques nos CTAs (para analytics)
+// Tracking de cliques nos CTAs (Facebook Pixel / Meta Ads)
 function initCTATracking() {
+    // 1. Rastrear botões gerais (Hero, Footer)
     const ctaButtons = document.querySelectorAll('.cta-button');
-
     ctaButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            const buttonText = button.textContent.trim();
-            console.log('CTA Clicked:', buttonText);
-
-            // Aqui você pode adicionar código para enviar eventos para Google Analytics, Facebook Pixel, etc.
-            // Exemplo: gtag('event', 'click', { 'event_category': 'CTA', 'event_label': buttonText });
+        button.addEventListener('click', () => {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact', { content_name: 'CTA Principal/Geral' });
+            }
         });
     });
+
+    // 2. Rastrear Planos de Preço (Pricing Section)
+    const planButtons = document.querySelectorAll('.cta-plan-v2');
+    planButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const planName = button.closest('.pricing-card-v2')?.querySelector('.plan-name-v2')?.textContent.trim() || 'Desconhecido';
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: planName,
+                    currency: 'BRL',
+                    value: planName.includes('Premium') ? 27.90 : 10.00
+                });
+            }
+        });
+    });
+
+    // 3. Rastrear Botões do Modal de Oferta
+    const modalMainBtn = document.querySelector('.modal-cta-main');
+    if (modalMainBtn) {
+        modalMainBtn.addEventListener('click', () => {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Plano Premium (Oferta)',
+                    currency: 'BRL',
+                    value: 18.99
+                });
+            }
+        });
+    }
+
+    const modalSecBtn = document.querySelector('.modal-cta-secondary');
+    if (modalSecBtn) {
+        modalSecBtn.addEventListener('click', () => {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Plano Básico (Oferta)',
+                    currency: 'BRL',
+                    value: 10.00
+                });
+            }
+        });
+    }
 }
 
 // Adicionar efeito de pulso nos botões principais
