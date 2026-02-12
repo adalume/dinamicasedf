@@ -1741,13 +1741,15 @@ body {
 .modal-card {
     background: white;
     width: 100%;
-    max-width: 500px;
-    border-radius: 24px;
+    max-width: 480px;
+    border-radius: 20px;
     position: relative;
-    padding: 60px 40px 40px;
+    padding: 40px 25px 30px;
     text-align: center;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow-y: auto;
+    max-height: 90vh;
 }
 
 @keyframes fadeIn {
@@ -1805,16 +1807,16 @@ body {
 }
 
 .modal-title {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: var(--color-primary);
 }
 
 .modal-subtitle {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .modal-subtitle strong {
@@ -1824,9 +1826,9 @@ body {
 .modal-pricing-box {
     background: white;
     border: 3px solid #fbbf24;
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 25px;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
     position: relative;
 }
 
@@ -1844,7 +1846,7 @@ body {
 }
 
 .modal-new-price {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 900;
     color: var(--color-action);
     line-height: 1;
@@ -1852,8 +1854,8 @@ body {
 
 .modal-features-list {
     text-align: left;
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
     border-top: 1px solid #eee;
 }
 
@@ -1893,12 +1895,12 @@ body {
     display: block;
     background: var(--color-action);
     color: white;
-    padding: 18px;
-    border-radius: 12px;
+    padding: 15px;
+    border-radius: 10px;
     font-weight: 900;
     text-decoration: none;
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 10px;
     transition: all 0.2s;
     box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.3);
     border: none;
@@ -1914,11 +1916,11 @@ body {
     display: block;
     background: #f1f5f9;
     color: #64748b;
-    padding: 14px;
-    border-radius: 12px;
+    padding: 12px;
+    border-radius: 10px;
     font-weight: 700;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.2s;
     border: 1px solid #e2e8f0;
 }
